@@ -1,0 +1,19 @@
+{% extends 'base.html '%}
+{% block content %}
+
+<body>
+
+{% for i in asosiy %}
+<div class="container">
+    <div class="chiroyliDiv">
+        <img class="image" src="{{i.image.url}}"><br>
+
+        <button class="button" id="{{i.id}}"> {{i.nomi}}</button>
+
+    </div>
+
+</div>
+
+{%endfor%}
+</body>
+{% endblock content %}

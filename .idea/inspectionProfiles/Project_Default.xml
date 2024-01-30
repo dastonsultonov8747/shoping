@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="django.template.context_processors.static.MEDIA_ROOT" />
+          <option value="config.urls.static" />
+          <option value="config.urls.settings" />
+          <option value="pagesapp.urls.path" />
+          <option value="news.urls.settings" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
