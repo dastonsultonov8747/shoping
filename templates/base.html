@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{% static 'stil.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stil.css' %}">
 
     <title>Onlayn Do'kon</title>
 
@@ -95,22 +95,22 @@
 
 
 
+
+
     </style>
 
 </head>
 <div style="flex-wrap: wrap-reverse;">
-<div style="display: flex; height: 100px; margin-top: 5px;margin-bottom: 10px;">
-    <img src="mdeia/tdmlogo.jpg" style="width: 200px;height: 50px;margin-left: 20px;">
-    <style>
+    <div style="display: flex; height: 100px; margin-top: 5px;margin-bottom: 10px;">
+        <style>
     .katalog{
         margin-left: 30px;
-        width:350px;
-        font-size: 40px;
-        border-radius: 10% 100px;
+        width:250px;
+        font-size: 30px;
+        border-radius: 10% 50px;
+        height: 80px;
+        margin-top:20px ;
    
-    }
-    .katalog :hover{
-        background: #250c63;
     }
     .qidiruv{
         margin-top: 25px;
@@ -120,35 +120,38 @@
         border-radius: 20px;
     }
   
-    </style>
-    <button class="katalog">Katalog</button>
 
-    <input type="text" style="width: 700px;height: 50px;border-radius: 20px;margin-left: 40px;margin-top: 25px;font-size: 40px;">
-    <button class="qidiruv">Qidiruv</button>
-</div>
 
-<header class="a">
-    <div class="animation-container">
-        <h1 class="animation-text">Onlayn Do'kon TDM<img src=""></h1>
+        </style>
+        <button class="katalog">Katalog</button>
+
+        <input type="text"
+               style="width: 400px;height: 50px;border-radius: 20px;margin-left: 40px;margin-top: 25px;font-size: 20px;">
+        <button class="qidiruv">Qidiruv</button>
     </div>
-</header>
 
-<nav>
-    <ul>
-        <li><a href="#">Bosh sahifa</a></li>
-        <li><a href="#">Xizmatlar</a></li>
-        <li><a href="#">Mahsulotlar</a></li>
-        <li><a href="#">Biz haqimizda</a></li>
+    <header class="a">
+        <div class="animation-container">
+            <h1 class="animation-text">Onlayn Do'kon TDM<img src=""></h1>
+        </div>
+    </header>
 
-    </ul>
-</nav>
-<main>
-    {% block content %}
-    {% endblock content %}
-</main>
-<footer>
-    <p>&copy; T D M</p>
-</footer>
+    <nav>
+        <ul>
+            <li><a href="/telefon/">Bosh sahifa</a></li>
+            <li><a href="/xizmatlar/">Xizmatlar</a></li>
+            <li><a href="/mahsulotlar/">Mahsulotlar</a></li>
+            <li><a href="/ozimiz-haqimizda/">Biz haqimizda</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <footer>
+        <p>&copy; T D M</p>
+    </footer>
 </div>
 </body>
 </html>

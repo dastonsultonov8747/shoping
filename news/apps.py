@@ -6,5 +6,3 @@ class NewsConfig(AppConfig):
     name = 'news'
 
 
-class Mansur():
-    print("salom")

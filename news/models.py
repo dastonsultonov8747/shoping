@@ -76,3 +76,11 @@ class Telefon(models.Model):
 
     def __str__(self):
         return self.nomi
+
+
+class Ozimiz_haqimizda(models.Model):
+    title = models.CharField(max_length=200)
+    malumot = models.TextField()
+
+    def __str__(self):
+        return self.title
