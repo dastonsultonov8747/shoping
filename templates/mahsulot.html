@@ -1,0 +1,83 @@
+<!-- templates/product_detail.html -->
+
+<style>
+    body{
+        background-color: #ffff   ;
+    }
+.img{
+        margin-top: 10px;
+        margin-left: 50px;
+        border-radius: 20% 5px;
+    }
+    
+        
+.vertical-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl; /* Matnni ustun bo'yicha chiqarish uchun */
+    text-orientation: upright; /* Matn tarafiga bo'yicha o'ngdan chapga chiqarish uchun */
+    font-family: 'Pacifico', cursive;
+    color: #ffff;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+.horizontal-container {
+    display: flex; /* Elementlarni yatay bo'yicha joylashtirish uchun flex ishlatamiz */    
+    align-items: center; /* Elementlarni vertikal o'qib yotkazish */
+    height: 600px;
+    padding: 20px;
+    background-color: #ffff;
+    margin-top: 5px;
+}
+.product-detail {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #ffff;
+        border: 1px solid #F51616;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-detail img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .product-info {
+        margin-top: 20px;
+    }
+
+    .product-info p {
+        margin-bottom: 10px;
+    }
+
+
+</style>
+<div class="horizontal-container">
+    <h2 class="vertical-text">Asus brendi </h2>
+    <img class="img" src="D:\1693937016561.jpeg" alt="Bu yerda rasm bor">
+
+
+    <div class="product-detail">
+        <h2>{{ product_info.name }}</h2>
+        <img src="{% static 'your_app/images/product_image.jpg' %}" alt="{{ product_info.name }}">
+
+    <div class="product-info">
+            <p class="description">{{ product_info.description }}</p>
+            <p class="price">Price: ${{ product_info.price }}</p>
+            <p class="stock">Stock: {{ product_info.stock }} units</p>
+            <!-- Boshqa mahsulot ma'lumotlarini ham shu yerga qo'shishingiz mumkin -->
+</div>
+</div>
+
+
+
+    
