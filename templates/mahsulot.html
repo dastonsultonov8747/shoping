@@ -1,46 +1,46 @@
-<!-- templates/product_detail.html -->
-
 <style>
-    body{
-        background-color: #ffff   ;
+    body {
+        background-color: #F90303;
     }
-.img{
+
+    .img {
         margin-top: 10px;
         margin-left: 50px;
         border-radius: 20% 5px;
     }
-    
-        
-.vertical-text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
 
-.vertical-text {
-    writing-mode: vertical-rl; /* Matnni ustun bo'yicha chiqarish uchun */
-    text-orientation: upright; /* Matn tarafiga bo'yicha o'ngdan chapga chiqarish uchun */
-    font-family: 'Pacifico', cursive;
-    color: #ffff;
-    font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    .vertical-text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150vh;
     }
-    
-.horizontal-container {
-    display: flex; /* Elementlarni yatay bo'yicha joylashtirish uchun flex ishlatamiz */    
-    align-items: center; /* Elementlarni vertikal o'qib yotkazish */
-    height: 600px;
-    padding: 20px;
-    background-color: #ffff;
-    margin-top: 5px;
-}
-.product-detail {
+
+    .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-family: 'Pacifico', cursive;
+        color: red;
+        font-size: 2em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .horizontal-container {
+        display: flex;
+        align-items: center;
+        height: 600px;
+        padding: 20px;
+        background-color: #7B7979;
+        margin-top: 5px;
+        position: relative; /* qo'shilgan qismi */
+    }
+
+    .product-detail {
         max-width: 600px;
         margin: auto;
         padding: 20px;
-        background-color: #ffff;
-        border: 1px solid #F51616;
+        background-color: #7B7979;
+        border: 1px solid #7B7979;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -59,25 +59,112 @@
         margin-bottom: 10px;
     }
 
+    .rasm2-container,
+    .additional-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        margin-top: 90px;
+    }
 
+    .rasm2,
+    .additional-item {
+        width: 100px;
+        margin-left: 165px;
+        border-radius: 8px;
+        transition: border-radius 0.1s ease;
+        margin-top: 10px;
+    }
+
+    .rasm2:hover,
+    .additional-item:hover {
+        border-radius: 20%;
+    }
+
+    .button-container,
+    .my-button,
+    .additional-button {
+        width: 100px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #7B7979;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 160px;
+        margin-bottom: 20px;
+    }
+
+    .my-button:hover,
+    .additional-button:hover {
+        border-radius: 200px;
+        background-color: black;
+    }
+
+    /* Oxirgi divlar uchun qo'shilgan qismi */
+    .horizontal-container .additional-container,
+    .horizontal-container .rasm2-container {
+        top: auto;
+        bottom: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .horizontal-container .additional-item,
+    .horizontal-container .additional-button,
+    .horizontal-container .rasm2 {
+        margin-top: 0;
+    }
+
+    .horizontal-container .additional-button {
+        margin-bottom: 0;
+    }
+
+    /* Oxirgi divlar uchun qo'shilgan qismi - chiroyli qilish */
+    .horizontal-container .additional-container .additional-item,
+    .horizontal-container .additional-container .additional-button,
+    .horizontal-container .rasm2-container .rasm2 {
+        transition: margin-bottom 0.3s ease;
+    }
+
+    .horizontal-container .additional-container:hover .additional-item,
+    .horizontal-container .additional-container:hover .additional-button,
+    .horizontal-container .rasm2-container:hover .rasm2 {
+        margin-bottom: 10px;
+    }
 </style>
+
+
+
 <div class="horizontal-container">
     <h2 class="vertical-text">Asus brendi </h2>
     <img class="img" src="D:\1693937016561.jpeg" alt="Bu yerda rasm bor">
-
-
+    
     <div class="product-detail">
+        <img src="D:\protsesor.jpg" alt="Bu yerda rasm bor" style="width: 400px; height: 100px;" name="rasm_1">
         <h2>{{ product_info.name }}</h2>
         <img src="{% static 'your_app/images/product_image.jpg' %}" alt="{{ product_info.name }}">
-
-    <div class="product-info">
+    
+        <div class="product-info">
             <p class="description">{{ product_info.description }}</p>
             <p class="price">Price: ${{ product_info.price }}</p>
             <p class="stock">Stock: {{ product_info.stock }} units</p>
-            <!-- Boshqa mahsulot ma'lumotlarini ham shu yerga qo'shishingiz mumkin -->
+        </div>
+    </div>
+
+    <!-- yangi qo'shilgan qismi -->
+    <div class="additional-container">
+        <div class="additional-item">
+            <img src="D:\protsesor.jpg" alt="Bu yerda rasm bor" class="rasm2">
+        </div>
+        <div>
+            <button class="my-button">salom</button>
+        </div>
+        </div>
+    </div>
+    <!-- yangi qo'shilgan qismi tugadi -->
 </div>
-</div>
-
-
-
-    
