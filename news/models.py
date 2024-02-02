@@ -13,6 +13,7 @@ class Asosiy_pages(models.Model):
 
 class Noutbuklarim(models.Model):
     image = models.ImageField(upload_to='noutbuklarimiz/', default=None)
+    brend = models.CharField(max_length=100)
     nomi = models.CharField()
     ekran = models.CharField()
     xotira = models.CharField()
@@ -28,6 +29,7 @@ class Noutbuklarim(models.Model):
 
 class Kompyuterlar(models.Model):
     image = models.ImageField(upload_to='kompyuterlarimiz/', default=None)
+    brend = models.CharField(max_length=100)
     nomi = models.CharField()
     ekran = models.CharField()
     xotira = models.CharField()
@@ -42,6 +44,7 @@ class Kompyuterlar(models.Model):
 
 class Printer(models.Model):
     image = models.ImageField(upload_to='printerlarimiz/', default=None)
+    brend = models.CharField(max_length=100)
     nomi = models.CharField()
     olchami = models.CharField()
     quvati = models.CharField()
@@ -54,6 +57,7 @@ class Printer(models.Model):
 
 class Oyin_kompyuter(models.Model):
     image = models.ImageField(upload_to='oyin_uchun_komyuterlarimiz/', default=None)
+    brend = models.CharField(max_length=100)
     nomi = models.CharField()
     ekran = models.CharField()
     xotira = models.CharField()
@@ -68,6 +72,7 @@ class Oyin_kompyuter(models.Model):
 
 class Telefon(models.Model):
     image = models.ImageField(upload_to='telefonlarimiz', default=None)
+    brend = models.CharField(max_length=100)
     nomi = models.CharField()
     ekran = models.CharField()
     xotira = models.CharField()

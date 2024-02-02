@@ -1,12 +1,15 @@
+{% extends 'base.html '%}
+{% block content %}
 <style>
     body {
-        background-color: #F90303;
+        background-color:111;
     }
 
     .img {
         margin-top: 10px;
-        margin-left: 50px;
-        border-radius: 20% 5px;
+        margin-left: 100px;
+        width: 600px;
+        height: 400px;
     }
 
     .vertical-text-container {
@@ -30,7 +33,7 @@
         align-items: center;
         height: 600px;
         padding: 20px;
-        background-color: #7B7979;
+        background-color: white;
         margin-top: 5px;
         position: relative; /* qo'shilgan qismi */
     }
@@ -43,6 +46,7 @@
         border: 1px solid #7B7979;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-left: 200px;
     }
 
     .product-detail img {
@@ -58,113 +62,81 @@
     .product-info p {
         margin-bottom: 10px;
     }
-
-    .rasm2-container,
-    .additional-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        left: 0;
-        z-index: 2;
-        margin-top: 90px;
+    .mahsulot_rasm{
+        width: 150px;
+        height: 70px;
+        margin-top: 20px;
+        margin-left: 10px;
     }
 
-    .rasm2,
-    .additional-item {
-        width: 100px;
-        margin-left: 165px;
-        border-radius: 8px;
-        transition: border-radius 0.1s ease;
-        margin-top: 10px;
-    }
 
-    .rasm2:hover,
-    .additional-item:hover {
-        border-radius: 20%;
-    }
+.mahsulot_rasm:hover {
+  border: 0.5px solid black ;    /* Borderni o'zgartirish */
+  padding-bottom: 25px;    /* Paddingni o'zgartirish */
+  outline: 0.1px solid red;   /* Chegara chiziqlarini o'zgartirish */
+  transform: scale(1.2);   /* Hajmini kattalashtirish */
+  width: 160px;
+  height: 70px;
+}
+.brend_mahsulot{
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
 
-    .button-container,
-    .my-button,
-    .additional-button {
-        width: 100px;
-        padding: 10px;
-        font-size: 16px;
-        background-color: #7B7979;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-left: 160px;
-        margin-bottom: 20px;
-    }
 
-    .my-button:hover,
-    .additional-button:hover {
-        border-radius: 200px;
-        background-color: black;
-    }
 
-    /* Oxirgi divlar uchun qo'shilgan qismi */
-    .horizontal-container .additional-container,
-    .horizontal-container .rasm2-container {
-        top: auto;
-        bottom: 0;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
+ 
 
-    .horizontal-container .additional-item,
-    .horizontal-container .additional-button,
-    .horizontal-container .rasm2 {
-        margin-top: 0;
-    }
 
-    .horizontal-container .additional-button {
-        margin-bottom: 0;
-    }
 
-    /* Oxirgi divlar uchun qo'shilgan qismi - chiroyli qilish */
-    .horizontal-container .additional-container .additional-item,
-    .horizontal-container .additional-container .additional-button,
-    .horizontal-container .rasm2-container .rasm2 {
-        transition: margin-bottom 0.3s ease;
-    }
-
-    .horizontal-container .additional-container:hover .additional-item,
-    .horizontal-container .additional-container:hover .additional-button,
-    .horizontal-container .rasm2-container:hover .rasm2 {
-        margin-bottom: 10px;
-    }
 </style>
 
-
+{%for i in telefon%}
 
 <div class="horizontal-container">
-    <h2 class="vertical-text">Asus brendi </h2>
-    <img class="img" src="D:\1693937016561.jpeg" alt="Bu yerda rasm bor">
-    
+    <div >
+
+        
+    </div>
+    <div>
+         <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+         <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+         <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+         <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+         <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+    </div>
+    <img class="img" src="D:\pngtree-hacked-computer-screen-of-a-hooded-hacker-sitting-at-his-computer-image_2914447.jpg" alt="Bu yerda rasm bor">
+
     <div class="product-detail">
-        <img src="D:\protsesor.jpg" alt="Bu yerda rasm bor" style="width: 400px; height: 100px;" name="rasm_1">
-        <h2>{{ product_info.name }}</h2>
-        <img src="{% static 'your_app/images/product_image.jpg' %}" alt="{{ product_info.name }}">
-    
+        <h1>{{i.brend}}{{i.nomi}}</h1>
+
         <div class="product-info">
-            <p class="description">{{ product_info.description }}</p>
-            <p class="price">Price: ${{ product_info.price }}</p>
-            <p class="stock">Stock: {{ product_info.stock }} units</p>
+            <p>Ekran hajmi ......<b>{{i.ekran}}</b></p>
+            <p>Xotira maydoni ......<b>{{i.xotira}}</b></p>
+            <p>Operati xotira ......<b>{{i.operativ_xotira}}</b></p>
+            <h2>Narxi :</h2>
+            <h3> <b>{{i.narxi}}  so'm</b></h3>
+
         </div>
     </div>
 
     <!-- yangi qo'shilgan qismi -->
-    <div class="additional-container">
-        <div class="additional-item">
-            <img src="D:\protsesor.jpg" alt="Bu yerda rasm bor" class="rasm2">
-        </div>
-        <div>
-            <button class="my-button">salom</button>
-        </div>
-        </div>
-    </div>
-    <!-- yangi qo'shilgan qismi tugadi -->
+
 </div>
+<div style="background-color: #fff;">
+    <h1>Bren nomi</h1>
+    <div style="">
+        <img src="" alt="bu yerda rasm bor" class="brend_mahsulot">
+        <img src="" alt="bu yerda rasm bor" class="brend_mahsulot">
+        <img src="" alt="bu yerda rasm bor" class="brend_mahsulot">
+        <img src="" alt="bu yerda rasm bor" class="brend_mahsulot">
+        <img src="" alt="bu yerda rasm bor" class="brend_mahsulot">
+        <img src="" alt="bu yerda rasm bor" class="brend_mahsulot">
+    >
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

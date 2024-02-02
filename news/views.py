@@ -50,4 +50,4 @@ def telefon(request):
     context = {
         'telefon': projects,
     }
-    return render(request, "telefon.html", context)
+    return render(request, "mahsulot.html", context)

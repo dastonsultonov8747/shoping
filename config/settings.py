@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shopping',
+        'NAME': 'shoping',
         'USER': 'postgres',
         'PASSWORD': '12345',
         'HOST': 'localhost',  # Ma'lumotlar bazasi serverining manzili (masalan, localhost)

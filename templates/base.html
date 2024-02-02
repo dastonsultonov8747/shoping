@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +15,18 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-color: #ffff; /* O'zgartirilgan rang */
         }
 
         header {
-            background-color: #542cb8;
+            background-color: #fff; /* O'zgartirilgan rang */
             color: white;
             text-align: center;
             padding: 1em;
         }
 
         nav {
-            background-color: #542cb8;
+            background-color: #7B7979;
             padding: 0.5em;
         }
 
@@ -45,26 +47,25 @@
         }
 
         footer {
-            background-color: #542cb8;
+            background-color: #7B7979;
             color: white;
             text-align: center;
             padding: 1em;
         }
 
-       
         a {
             text-decoration: none;
             margin-left: 40px;
-            color: #ecf0f1; /* Chiroyli rang (quyidagi kodda) */
+            color: #ECF0F1; /* O'zgartirilgan rang */
             font-weight: bold;
             font-size: 1.2em;
             padding: 0.5em 1em;
             border-radius: 3px;
-            transition: background-color 0.5s ease;
+            transition: background-color 0.1s ease;
         }
 
         a:hover {
-            background-color: #250c63; /* Hovery bo'lganda rang (quyidagi kodda) */
+            background-color: #F90303; /* O'zgartirilgan rang */
         }
 
         .animation-container {
@@ -75,7 +76,7 @@
         .animation-text {
             font-size: 7em;
             font-weight: bold;
-            color: #ecf0f1; /* Chiroyli rang (quyidagi kodda) */
+            color: #000000; /* O'zgartirilgan rang */
             position: relative;
             animation: moveText 8s linear infinite;
         }
@@ -89,69 +90,75 @@
             }
         }
 
+        .katalog {
+            margin-left: 30px;
+            width: 250px;
+            font-size: 30px;
+            border-radius: 10% 50px;
+            height: 80px;
+            margin-top: 20px;
+            background-color: #7B7979; /* O'zgartirilgan rang */
+        }
 
+        .qidiruv {
+            margin-top: 25px;
+            margin-left: 20px;
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #7B7979; /* O'zgartirilgan rang */
+        }
 
+        button[name="yurak"] {
+            background-color: #F90303; /* O'zgartirilgan rang */
+            border: none;
+            border-radius: 50%;
+            color: white;
+            padding: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.1s ease;
+        }
 
-
-
-
-
-
+        button[name="yurak"]:hover {
+            background-color: #ECF0F1; /* O'zgartirilgan rang */
+        }
     </style>
 
 </head>
-<div style="flex-wrap: wrap-reverse;">
-    <div style="display: flex; height: 100px; margin-top: 5px;margin-bottom: 10px;">
-        <style>
-    .katalog{
-        margin-left: 30px;
-        width:250px;
-        font-size: 30px;
-        border-radius: 10% 50px;
-        height: 80px;
-        margin-top:20px ;
-   
-    }
-    .qidiruv{
-        margin-top: 25px;
-        margin-left: 20px;
-        width: 200px;
-        height: 50px;
-        border-radius: 20px;
-    }
-  
 
+<body>
+    <div style="flex-wrap: wrap-reverse;">
+        <div style="display: flex; height: 100px; margin-top: 5px;margin-bottom: 10px;">
+            <button class="katalog">Katalog</button>
 
-        </style>
-        <button class="katalog">Katalog</button>
-
-        <input type="text"
-               style="width: 400px;height: 50px;border-radius: 20px;margin-left: 40px;margin-top: 25px;font-size: 20px;">
-        <button class="qidiruv">Qidiruv</button>
-    </div>
-
-    <header class="a">
-        <div class="animation-container">
-            <h1 class="animation-text">Onlayn Do'kon TDM<img src=""></h1>
+            <input type="text" style="width: 400px;height: 50px;border-radius: 20px;margin-left: 40px;margin-top: 25px;font-size: 20px;">
+            <button class="qidiruv">Qidiruv</button>
+            <button name="yurak">Yurak</button>
         </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="/telefon/">Bosh sahifa</a></li>
-            <li><a href="/xizmatlar/">Xizmatlar</a></li>
-            <li><a href="/mahsulotlar/">Mahsulotlar</a></li>
-            <li><a href="/ozimiz-haqimizda/">Biz haqimizda</a></li>
-
-        </ul>
-    </nav>
-    <main>
-        {% block content %}
-        {% endblock content %}
-    </main>
-    <footer>
-        <p>&copy; T D M</p>
-    </footer>
-</div>
+        <header class="a">
+            <div class="animation-container">
+                <h1 class="animation-text">Onlayn Do'kon TDM<img src=""></h1>
+            </div>
+        </header>
+      
+        <nav>
+            <ul>
+                <li><a href="/telefon/">Bosh sahifa</a></li>
+                <li><a href="/xizmatlar/">Xizmatlar</a></li>
+                <li><a href="/mahsulotlar/">Mahsulotlar</a></li>
+                <li><a href="/ozimiz-haqimizda/">Biz haqimizda</a></li>
+            </ul>
+        </nav>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+        <footer>
+            <p style="color: #000000;">&copy; T D M</p> <!-- O'zgartirilgan rang -->
+        </footer>
+    </div>
 </body>
+
 </html>
