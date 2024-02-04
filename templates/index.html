@@ -2,19 +2,76 @@
 {% block content %}
 
 <body>
+    <style>
+    .card {
+          height: auto;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          margin-left: 5px;
+          margin-bottom: 10px;
+          transition: transform 0.3s ease;
+          margin-top: 10px;
+          display: flex;
+        }
+        .card2 {
+          height: auto;
+          width: 200px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          margin-left: 5px;
+          margin-bottom: 5px;
+          transition: transform 0.3s ease;
+          margin-top: 5px;
+        }
+        .label1 {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 2px solid #bbb;
+      background-image: url('D:/images/telefonlarimiz/images4.jpg');
+      background-size: cover;
+      display: inline-block;
+    }
 
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+    
+        </style>
+<!--     
+    <div class="card" >
+        <div>
+        <h2>Aksiyadagi mahsulotlar</h2>
+        <p>Tugash vaqti  </p>
+        <p style="background-color: blueviolet;" >12 kun 10 soat 50 daqiqa</p>
+        </div>
+        <div class="card2">
+        <label><img src="" alt="Bu yerda rasm bor"><br><br>{{ nomi}}<br>{{nechi foiz skidkada}}</label>  
+        </div>  
+    </div> -->
 
-{% for i in asosiy %}
-<div class="container">
-    <div class="chiroyliDiv">
-        <img class="image" src="{{i.image.url}}"><br>
-
-        <button class="button" id="i.id"> {{i.nomi}}</button>
-
+    <div class="card">
+     
+        <label class="label1" for="example"><p class="text-overlay">Salom</p></label>
+        <div class="card2" style="margin-left: 40px;">
+            <img src="" alt="bu yerda rasm bor">
+            
+        </div>
     </div>
 
-</div>
 
-{%endfor%}
+
+
+
+
 </body>
 {% endblock content %}
