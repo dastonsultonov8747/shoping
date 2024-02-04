@@ -123,42 +123,87 @@
         button[name="yurak"]:hover {
             background-color: #ECF0F1; /* O'zgartirilgan rang */
         }
+        
+.card {
+    height: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+      margin-top: 10px;
+    }
+
     </style>
 
 </head>
 
 <body>
-    <div style="flex-wrap: wrap-reverse;">
-        <div style="display: flex; height: 100px; margin-top: 5px;margin-bottom: 10px;">
-            <button class="katalog">Katalog</button>
+<div style="flex-wrap: wrap-reverse;">
+    <div style="display: flex; height: 100px; margin-top: 5px;margin-bottom: 10px;">
+        <button class="katalog">Katalog</button>
 
-            <input type="text" style="width: 400px;height: 50px;border-radius: 20px;margin-left: 40px;margin-top: 25px;font-size: 20px;">
-            <button class="qidiruv">Qidiruv</button>
-            <button name="yurak">Yurak</button>
+        <input type="text"
+               style="width: 400px;height: 50px;border-radius: 20px;margin-left: 40px;margin-top: 25px;font-size: 20px;">
+        <button class="qidiruv">Qidiruv</button>
+        <button name="yurak">Yurak</button>
+    </div>
+
+    <header class="a">
+        <div class="animation-container">
+            <h1 class="animation-text">Onlayn Do'kon TDM<img src=""></h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/telefon/">Bosh sahifa</a></li>
+            <li><a href="/xizmatlar/">Xizmatlar</a></li>
+            <li><a href="/mahsulotlar/">Mahsulotlar</a></li>
+            <li><a href="/ozimiz-haqimizda/">Biz haqimizda</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <footer>
+        <div class="card" style="display: flex;">
+            <div>
+                <h1>BIZNING BREND</h1>
+                <h2>Biz bilan bog'lanish</h2>
+                <h2>Tel....</h2>
+                <h2>Manzil.....</h2>
+                <h3>Email manzil.....</h3>
+            </div>
+
+            <div style="margin-left: 200px;">
+                <h1>Malumot olish</h1>
+                <p>salom</p>
+            </div>
+
+
+            <div style="margin-left: 200px;">
+                <h1>Malumot olish</h1>
+                <p>salom</p>
+            </div>
+
+            <div style="margin-left: 100px;margin-top: 20px;">
+                <button>Apple</button>
+                <button>Apple</button>
+                <br>
+                <button>Apple</button>
+                <button>Apple</button>
+            </div>
+
+
         </div>
 
-        <header class="a">
-            <div class="animation-container">
-                <h1 class="animation-text">Onlayn Do'kon TDM<img src=""></h1>
-            </div>
-        </header>
-      
-        <nav>
-            <ul>
-                <li><a href="/telefon/">Bosh sahifa</a></li>
-                <li><a href="/xizmatlar/">Xizmatlar</a></li>
-                <li><a href="/mahsulotlar/">Mahsulotlar</a></li>
-                <li><a href="/ozimiz-haqimizda/">Biz haqimizda</a></li>
-            </ul>
-        </nav>
-        <main>
-            {% block content %}
-            {% endblock content %}
-        </main>
-        <footer>
-            <p style="color: #000000;">&copy; T D M</p> <!-- O'zgartirilgan rang -->
-        </footer>
-    </div>
+
+    </footer>
+</div>
 </body>
 
 </html>
