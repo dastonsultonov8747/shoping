@@ -124,6 +124,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 </style>
 
 {%for i in telefon%}
@@ -141,18 +151,20 @@
         <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
     </div>
     <img class="img"
-         src="D:\pngtree-hacked-computer-screen-of-a-hooded-hacker-sitting-at-his-computer-image_2914447.jpg"
+         src="{{i.img}}"
          alt="Bu yerda rasm bor">
 
     <div class="product-detail">
-        <h1>{{i.brend}}{{i.nomi}}</h1>
+        <h1>{{i.brend}}{{i.model}}</h1>
 
         <div class="product-info">
-            <p>Ekran hajmi ......<b>{{i.ekran}}</b></p>
-            <p>Xotira maydoni ......<b>{{i.xotira}}</b></p>
-            <p>Operati xotira ......<b>{{i.operativ_xotira}}</b></p>
+            <p>Ekran hajmi ......<b>{{i.ekran_dyum}}</b></p>
+            <p>Protsesor ......<b>{{i.protsesor}}</b></p>
+            <p>Doimiy Xotira ......<b>{{i.doimiy_xotira}}</b></p>
+            <p>Tezkor xotira........{{i.tezkor_xotira}}</p>
+
             <h2>Narxi :</h2>
-            <h3><b>{{i.narxi}} so'm</b></h3>
+            <h3><b>{{i.price}} </b></h3>
 
         </div>
     </div>
@@ -171,28 +183,27 @@
         margin-left: 10px;
         font-size: 15px;
       }
-
         </style>
-        <p class="text_malumot">O'lchami..............</p>
-        <p class="text_malumot">Ekrani..............</p>
-        <p class="text_malumot">Protsesor..............</p>
-        <p class="text_malumot">Xotira..............</p>
-        <p class="text_malumot">Rangi..............</p>
-        <p class="text_malumot">Vazni..............</p>
-        <p class="text_malumot">Operatsion sistema..............</p>
+        <p class="text_malumot">Ekrani..............{{i.ekran_dyum}}</p>
+        <p class="text_malumot">Protsesor..............{{i.protsessor}}</p>
+        <p class="text_malumot">Doimiy Xotira..............{{i.doimiy_xotira}}</p>
+        <p class="text_malumot">Tezkor Xotira..............{{i.tezkokor_xotira}}</p>
+        <p class="text_malumot">Rangi..............{{i.rangi}}</p>
+        <p class="text_malumot">Operatsion sistema..............Yo'q</p>
 
-        <h2>Xotira va protsessor</h2>
-        <p class="text_malumot">Doimiy xotira hajmi................</p>
-        <p class="text_malumot">Protsesor nomi................</p>
-        <p class="text_malumot">Xotira kartasi uchun bo'linma................</p>
-        <p class="text_malumot">Doimiy xotira hajmi................</p>
-        <p class="text_malumot">Vaqtinchalik xotira hajmi................</p>
+        <h2>Malumotlar</h2>
+        <p class="text_malumot">{{i.description}}</p></p>
+        <!--        <p class="text_malumot">Doimiy xotira hajmi................</p>-->
+        <!--        <p class="text_malumot">Protsesor nomi................</p>-->
+        <!--        <p class="text_malumot">Xotira kartasi uchun bo'linma................</p>-->
+        <!--        <p class="text_malumot">Doimiy xotira hajmi................</p>-->
+        <!--        <p class="text_malumot">Vaqtinchalik xotira hajmi................</p>-->
 
 
-        <h2>Taminot</h2>
-        <p class="text_malumot">Batareya quvati................</p>
-        <p class="text_malumot">Zarydalash vaqti................</p>
-        <p class="text_malumot">Ishlash vaqti................</p>
+        <!--        <h2>Taminot</h2>-->
+        <!--        <p class="text_malumot">Batareya quvati................</p>-->
+        <!--        <p class="text_malumot">Zarydalash vaqti................</p>-->
+        <!--        <p class="text_malumot">Ishlash vaqti................</p>-->
     </div>
 </div>
 

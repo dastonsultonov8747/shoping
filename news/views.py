@@ -1,5 +1,6 @@
 from .models import *
 from django.shortcuts import render, redirect
+import requests
 
 
 # Create your views here.
@@ -14,7 +15,7 @@ def asosiy(request):
 
 
 def noutboklar(request):
-    projects = Noutbuklarim.objects.all()
+    projects = requests.get('https://sheetdb.io/api/v1/9hxiqor7ngy49').json()
     context = {
         'noutbuk': projects,
     }
@@ -46,7 +47,7 @@ def printer(request):
 
 
 def telefon(request):
-    projects = Telefon.objects.all()
+    projects = requests.get('https://sheetdb.io/api/v1/9hxiqor7ngy49').json()
     context = {
         'telefon': projects,
     }

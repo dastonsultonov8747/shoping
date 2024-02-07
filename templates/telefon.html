@@ -1,45 +1,45 @@
-<!-- templates/product_detail.html -->
-<style>
-    .product-detail {
-        max-width: 600px;
-        margin: auto;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+<!--&lt;!&ndash; templates/product_detail.html &ndash;&gt;-->
+<!--<style>-->
+<!--    .product-detail {-->
+<!--        max-width: 600px;-->
+<!--        margin: auto;-->
+<!--        padding: 20px;-->
+<!--        background-color: #f9f9f9;-->
+<!--        border: 1px solid #ddd;-->
+<!--        border-radius: 8px;-->
+<!--        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);-->
+<!--    }-->
 
-    .product-detail img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
+<!--    .product-detail img {-->
+<!--        max-width: 100%;-->
+<!--        height: auto;-->
+<!--        border-radius: 8px;-->
+<!--    }-->
 
-    .product-info {
-        margin-top: 20px;
-    }
+<!--    .product-info {-->
+<!--        margin-top: 20px;-->
+<!--    }-->
 
-    .product-info p {
-        margin-bottom: 10px;
-    }
-</style>
+<!--    .product-info p {-->
+<!--        margin-bottom: 10px;-->
+<!--    }-->
+<!--</style>-->
 
-<div class="product-detail">
-    <!-- Mahsulot malumotlari joylashtirilgan qismi -->
-</div>
-{% extends 'base.html' %}
+<!--<div class="product-detail">-->
+<!--    &lt;!&ndash; Mahsulot malumotlari joylashtirilgan qismi &ndash;&gt;-->
+<!--</div>-->
+<!--{% extends 'base.html' %}-->
 
-{% block content %}
-    <div class="product-detail">
-        <h2>{{ product_info.name }}</h2>
-        <img src="{% static 'your_app/images/product_image.jpg' %}" alt="{{ product_info.name }}">
+<!--{% block content %}-->
+<!--    <div class="product-detail">-->
+<!--        <h2>{{ product_info.name }}</h2>-->
+<!--        <img src="{% static 'your_app/images/product_image.jpg' %}" alt="{{ product_info.name }}">-->
 
-    <div class="product-info">
-            <p class="description">{{ product_info.description }}</p>
-            <p class="price">Price: ${{ product_info.price }}</p>
-            <p class="stock">Stock: {{ product_info.stock }} units</p>
-            <!-- Boshqa mahsulot ma'lumotlarini ham shu yerga qo'shishingiz mumkin -->
-    </div>
-    </div>
-{% endblock content %}
+<!--    <div class="product-info">-->
+<!--            <p class="description">{{ product_info.description }}</p>-->
+<!--            <p class="price">Price: ${{ product_info.price }}</p>-->
+<!--            <p class="stock">Stock: {{ product_info.stock }} units</p>-->
+<!--            &lt;!&ndash; Boshqa mahsulot ma'lumotlarini ham shu yerga qo'shishingiz mumkin &ndash;&gt;-->
+<!--    </div>-->
+<!--    </div>-->
+<!--{% endblock content %}-->
