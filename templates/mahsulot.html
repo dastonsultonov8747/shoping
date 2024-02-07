@@ -1,125 +1,123 @@
-<!--{% extends 'base.html '%}-->
-<!--{% block content %}-->
-<!--<style>-->
-<!--    body {-->
-<!--        background-color:red;-->
-<!--    }-->
+{% extends 'base.html '%}
+{% block content %}
+<style>
+    body {
+        background-color:red;
+    }
 
-<!--    .img {-->
-<!--        margin-top: 10px;-->
-<!--        margin-left: 100px;-->
-<!--        width: 600px;-->
-<!--        height: 400px;-->
-<!--    }-->
+    .img {
+        margin-top: 10px;
+        margin-left: 100px;
+        width: 600px;
+        height: 400px;
+    }
 
-<!--    .vertical-text-container {-->
-<!--        display: flex;-->
-<!--        align-items: center;-->
-<!--        justify-content: center;-->
-<!--        height: 150vh;-->
-<!--    }-->
+    .vertical-text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150vh;
+    }
 
-<!--    .vertical-text {-->
-<!--        writing-mode: vertical-rl;-->
-<!--        text-orientation: upright;-->
-<!--        font-family: 'Pacifico', cursive;-->
-<!--        color: red;-->
-<!--        font-size: 2em;-->
-<!--        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);-->
-<!--    }-->
+    .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-family: 'Pacifico', cursive;
+        color: red;
+        font-size: 2em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
-<!--    .horizontal-container {-->
-<!--        display: flex;-->
-<!--        align-items: center;-->
-<!--        height: 600px;-->
-<!--        padding: 20px;-->
-<!--        background-color: white;-->
-<!--        margin-top: 5px;-->
-<!--        position: relative; /* qo'shilgan qismi */-->
-<!--    }-->
+    .horizontal-container {
+        display: flex;
+        align-items: center;
+        height: 600px;
+        padding: 20px;
+        background-color: white;
+        margin-top: 5px;
+        position: relative; /* qo'shilgan qismi */
+    }
 
-<!--    .product-detail {-->
-<!--        max-width: 600px;-->
-<!--        margin: auto;-->
-<!--        padding: 20px;-->
-<!--        background-color: #7B7979;-->
-<!--        border: 1px solid #7B7979;-->
-<!--        border-radius: 8px;-->
-<!--        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);-->
-<!--        margin-left: 200px;-->
-<!--    }-->
+    .product-detail {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #7B7979;
+        border: 1px solid #7B7979;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-left: 200px;
+    }
 
-<!--    .product-detail img {-->
-<!--        max-width: 100%;-->
-<!--        height: auto;-->
-<!--        border-radius: 8px;-->
-<!--    }-->
+    .product-detail img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 
-<!--    .product-info {-->
-<!--        margin-top: 20px;-->
-<!--    }-->
+    .product-info {
+        margin-top: 20px;
+    }
 
-<!--    .product-info p {-->
-<!--        margin-bottom: 10px;-->
-<!--    }-->
-<!--    .mahsulot_rasm{-->
-<!--        width: 150px;-->
-<!--        height: 70px;-->
-<!--        margin-top: 20px;-->
-<!--        margin-left: 10px;-->
-<!--    }-->
+    .product-info p {
+        margin-bottom: 10px;
+    }
+    .mahsulot_rasm{
+        width: 150px;
+        height: 70px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
 
 
-<!--.mahsulot_rasm:hover {-->
-<!--  border: 0.5px solid black ;    /* Borderni o'zgartirish */-->
-<!--  padding-bottom: 25px;    /* Paddingni o'zgartirish */-->
-<!--  outline: 0.1px solid red;   /* Chegara chiziqlarini o'zgartirish */-->
-<!--  transform: scale(1.2);   /* Hajmini kattalashtirish */-->
-<!--  width: 160px;-->
-<!--  height: 70px;-->
-<!--}-->
+.mahsulot_rasm:hover {
+  border: 0.5px solid black ;    /* Borderni o'zgartirish */
+  padding-bottom: 25px;    /* Paddingni o'zgartirish */
+  outline: 0.1px solid red;   /* Chegara chiziqlarini o'zgartirish */
+  transform: scale(1.2);   /* Hajmini kattalashtirish */
+  width: 160px;
+  height: 70px;
+}
 
-<!--.card {-->
-<!--    height: auto;-->
-<!--      background-color: #fff;-->
-<!--      border-radius: 10px;-->
-<!--      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);-->
-<!--      overflow: hidden;-->
-<!--      margin-left: 5px;-->
-<!--      margin-bottom: 10px;-->
-<!--      transition: transform 0.3s ease;-->
-<!--      margin-top: 10px;-->
-<!--    }-->
+.card {
+    height: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+      margin-top: 10px;
+    }
 
-<!--    /* .card:hover {-->
-<!--      transform: scale(1.05);-->
-<!--    } */-->
+    /* .card:hover {
+      transform: scale(1.05);
+    } */
 
-<!--    .card img {-->
-<!--      width: 100%;-->
-<!--      height: 150px;-->
-<!--      object-fit: cover;-->
-<!--      border-bottom: 1px solid #ddd;-->
-<!--    }-->
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
 
-<!--    .card-content {-->
-<!--      padding: 20px;-->
-<!--    }-->
-<!--    -->
-<!--.card2 {-->
-<!--      height: auto;-->
-<!--      background-color: #fff;-->
-<!--      border-radius: 10px;-->
-<!--      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);-->
-<!--      overflow: hidden;-->
-<!--      margin-left: 5px;-->
-<!--      margin-bottom: 10px;-->
-<!--      transition: transform 0.3s ease;-->
-<!--      margin-top: 10px;-->
-<!--      width: 99%;-->
-<!--    }-->
+    .card-content {
+      padding: 20px;
+    }
 
-<!-- -->
+.card2 {
+      height: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+      margin-top: 10px;
+      width: 99%;
+    }
 
 
 
@@ -134,97 +132,99 @@
 
 
 
-<!--</style>-->
-
-<!--{%for i in telefon%}-->
-
-<!--<div class="horizontal-container">-->
-<!--    <div>-->
 
 
-<!--    </div>-->
-<!--    <div>-->
-<!--        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>-->
-<!--        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>-->
-<!--        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>-->
-<!--        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>-->
-<!--        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>-->
-<!--    </div>-->
-<!--    <img class="img"-->
-<!--         src="{{i.img}}"-->
-<!--         alt="Bu yerda rasm bor">-->
+</style>
 
-<!--    <div class="product-detail">-->
-<!--        <h1>{{i.brend}}{{i.model}}</h1>-->
+{%for i in telefon%}
 
-<!--        <div class="product-info">-->
-<!--            <p>Ekran hajmi ......<b>{{i.ekran_dyum}}</b></p>-->
-<!--            <p>Protsesor ......<b>{{i.protsesor}}</b></p>-->
-<!--            <p>Doimiy Xotira ......<b>{{i.doimiy_xotira}}</b></p>-->
-<!--            <p>Tezkor xotira........{{i.tezkor_xotira}}</p>-->
-
-<!--            <h2>Narxi :</h2>-->
-<!--            <h3><b>{{i.price}} </b></h3>-->
-
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash; yangi qo'shilgan qismi &ndash;&gt;-->
-
-<!--</div>-->
+<div class="horizontal-container">
+    <div>
 
 
-<!--<div style="display: flex;">-->
-<!--    <div class="card2">-->
-<!--        <h1>Xususiyatlari</h1>-->
-<!--        <h2>Umumiy malumot</h2>-->
-<!--        <style>-->
-<!--      .text_malumot{-->
-<!--        margin-left: 10px;-->
-<!--        font-size: 15px;-->
-<!--      }-->
-<!--        </style>-->
-<!--        <p class="text_malumot">Ekrani..............{{i.ekran_dyum}}</p>-->
-<!--        <p class="text_malumot">Protsesor..............{{i.protsessor}}</p>-->
-<!--        <p class="text_malumot">Doimiy Xotira..............{{i.doimiy_xotira}}</p>-->
-<!--        <p class="text_malumot">Tezkor Xotira..............{{i.tezkokor_xotira}}</p>-->
-<!--        <p class="text_malumot">Rangi..............{{i.rangi}}</p>-->
-<!--        <p class="text_malumot">Operatsion sistema..............Yo'q</p>-->
+    </div>
+    <div>
+        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+        <img src="D:\images\telefonlarimiz\images1.jpg" alt="bu yerda rasm bor" class="mahsulot_rasm"><br>
+    </div>
+    <img class="img"
+         src="{{i.img}}"
+         alt="Bu yerda rasm bor">
 
-<!--        <h2>Malumotlar</h2>-->
-<!--        <p class="text_malumot">{{i.description}}</p></p>-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Doimiy xotira hajmi................</p>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Protsesor nomi................</p>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Xotira kartasi uchun bo'linma................</p>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Doimiy xotira hajmi................</p>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Vaqtinchalik xotira hajmi................</p>&ndash;&gt;-->
+    <div class="product-detail">
+        <h1>{{i.brend}}{{i.model}}</h1>
 
+        <div class="product-info">
+            <p>Ekran hajmi ......<b>{{i.ekran_dyum}}</b></p>
+            <p>Protsesor ......<b>{{i.protsesor}}</b></p>
+            <p>Doimiy Xotira ......<b>{{i.doimiy_xotira}}</b></p>
+            <p>Tezkor xotira........{{i.tezkor_xotira}}</p>
 
-<!--        &lt;!&ndash;        <h2>Taminot</h2>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Batareya quvati................</p>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Zarydalash vaqti................</p>&ndash;&gt;-->
-<!--        &lt;!&ndash;        <p class="text_malumot">Ishlash vaqti................</p>&ndash;&gt;-->
-<!--    </div>-->
-<!--</div>-->
+            <h2>Narxi :</h2>
+            <h3><b>{{i.price}} </b></h3>
+
+        </div>
+    </div>
+
+    <!-- yangi qo'shilgan qismi -->
+
+</div>
 
 
-<!--<div style="background-color: #fff;" class="card">-->
-<!--    <h1>Bren nomi</h1>-->
-<!--    <div class="card">-->
-<!--        <div style="display: flex;">-->
-<!--            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot-->
-<!--                name</label>-->
-<!--            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot-->
-<!--                name</label>-->
-<!--            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot-->
-<!--                name</label>-->
-<!--            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot-->
-<!--                name</label>-->
-<!--            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot-->
-<!--                name</label>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div style="display: flex;">
+    <div class="card2">
+        <h1>Xususiyatlari</h1>
+        <h2>Umumiy malumot</h2>
+        <style>
+      .text_malumot{
+        margin-left: 10px;
+        font-size: 15px;
+      }
+        </style>
+        <p class="text_malumot">Ekrani..............{{i.ekran_dyum}}</p>
+        <p class="text_malumot">Protsesor..............{{i.protsessor}}</p>
+        <p class="text_malumot">Doimiy Xotira..............{{i.doimiy_xotira}}</p>
+        <p class="text_malumot">Tezkor Xotira..............{{i.tezkokor_xotira}}</p>
+        <p class="text_malumot">Rangi..............{{i.rangi}}</p>
+        <p class="text_malumot">Operatsion sistema..............Yo'q</p>
 
-<!--{% endfor %}-->
-<!--{% endblock content %}-->
+        <h2>Malumotlar</h2>
+        <p class="text_malumot">{{i.description}}</p></p>
+        <!--        <p class="text_malumot">Doimiy xotira hajmi................</p>-->
+        <!--        <p class="text_malumot">Protsesor nomi................</p>-->
+        <!--        <p class="text_malumot">Xotira kartasi uchun bo'linma................</p>-->
+        <!--        <p class="text_malumot">Doimiy xotira hajmi................</p>-->
+        <!--        <p class="text_malumot">Vaqtinchalik xotira hajmi................</p>-->
+
+
+        <!--        <h2>Taminot</h2>-->
+        <!--        <p class="text_malumot">Batareya quvati................</p>-->
+        <!--        <p class="text_malumot">Zarydalash vaqti................</p>-->
+        <!--        <p class="text_malumot">Ishlash vaqti................</p>-->
+    </div>
+</div>
+
+
+<div style="background-color: #fff;" class="card">
+    <h1>Bren nomi</h1>
+    <div class="card">
+        <div style="display: flex;">
+            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot
+                name</label>
+            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot
+                name</label>
+            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot
+                name</label>
+            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot
+                name</label>
+            <label><img src="" alt="Bu yerda rasm bor" style="margin-left: 20px; margin-top: 5px;margin-bottom: 15px;">Mahsulot
+                name</label>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock content %}
