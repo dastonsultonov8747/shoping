@@ -1,65 +1,112 @@
-{% extends 'base.html '%}
-{% block content %}
+{% extends 'base.html' %}
 
-<body>
-<style>
+{% block content %}
+  <style>
     .card {
-          height: auto;
-          background-color: #fff;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-          margin-left: 5px;
-          margin-bottom: 10px;
-          transition: transform 0.3s ease;
-          margin-top: 10px;
-          display: flex;
-        }
-        .card2 {
-          height: auto;
-          width: 200px;
-          background-color: #fff;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-          margin-left: 5px;
-          margin-bottom: 5px;
-          transition: transform 0.3s ease;
-          margin-top: 5px;
-        }
-        .label1 {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      border: 2px solid #bbb;
-      background-image: url('D:/images/telefonlarimiz/images4.jpg');
-      background-size: cover;
-      display: inline-block;
+      height: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+      margin-top: 10px;
+      display: flex;
     }
 
-    .text-overlay {
+    .card2 {
+      height: 350px;
+      background-image: url('D:\imags.jpg');
+      background-size: cover;
+      background-position: center;
+      width: 400px;
+      position: relative;
+    }
+
+    .card2 h2 {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: white;
+      color: #ffffff;
       text-align: center;
     }
 
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Chiroyli fon rangi */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card2:hover .overlay {
+      opacity: 1;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: ;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 200px;
+      height: 70px;
+    }
+    .button:hover{
+      border: 2px solid #1EFF25;
+      background-color: #5BFFBC;
+      rotate: 5deg;
+      translate: 1rem;
+    }
+  </style>
+
+  <body>
+
+    <div class="card">
 
 
-</style>
 
 
-<div class="card">
+      <div class="card2">
+        <h2>Salom</h2>
+        <div class="overlay">
+          <button class="button">To'liq manba </button>
+          <p >Uy jihozlari</p>
+        </div>
+      </div>
 
-    <label class="label1" for="example"><p class="text-overlay">Salom</p></label>
-    <div class="card2" style="margin-left: 40px;">
-        <img src="" alt="bu yerda rasm bor">
+      <div style="
+        height: auto;
+      background-color: green;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+      margin-top: 10px;
+      display: flex
+      ">
+      <h2>salom</h2>
+      </div>
+
+
+
+
+
 
     </div>
-</div>
 
+  </body>
 
-</body>
 {% endblock content %}
